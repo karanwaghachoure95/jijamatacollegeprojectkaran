@@ -123,13 +123,28 @@
 										href="gallery.jsp">Gallery</a></li>
 									<li class="nav-item"><a class="nav-link" href="blog.jsp">Blog</a>
 									</li>
-									<li class="nav-item"><a class="nav-link"
-										href="contact.jsp">Contact</a></li>
+
+
+									<li class="nav-item dropdown"><a
+										class="nav-link dropdown-toggle" href="#" id="contactDropdown"
+										role="button" data-bs-toggle="dropdown" aria-expanded="false">
+											Contact </a>
+										<ul class="dropdown-menu" aria-labelledby="contactDropdown">
+											<li><a class="dropdown-item" href="contact.jsp">User
+													Contact to collage</a></li>
+											<li><a class="dropdown-item" href="admincontactemailset">
+													Admin Contact Login</a></li>
+											<li><a class="dropdown-item" href="registeremailset">
+													Admin Register Login</a></li>
+										</ul></li>
+
+
+
 									<li class="nav-item "><a class="nav-link" href="video.jsp">Video</a>
 									</li>
 
 									<li class="nav-item"><a class="nav-link"
-										href="examform.jsp">ExamForm</a></li>
+										href="examform.jsp">Exam_Form_Link</a></li>
 
 									<li class="nav-item dropdown"><a
 										class="nav-link dropdown-toggle" href="#" id="libraryDropdown"
@@ -140,10 +155,23 @@
 													Library Account</a></li>
 											<li><a class="dropdown-item" href="libraryLogin.jsp">show
 													your library Account</a></li>
-											<li><a class="dropdown-item" href="booklogin.jsp">Book Available</a></li>
-
+											<li><a class="dropdown-item" href="booklogin.jsp">Book
+													Available</a></li>
+											<li><a class="dropdown-item" href="adminOtpset">
+													 Admin Library Login </a></li>
 										</ul></li>
 
+									<li class="nav-item dropdown"><a
+										class="nav-link dropdown-toggle" href="#"
+										id="admissionDropdown" role="button" data-bs-toggle="dropdown">
+											Admission Forms </a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="fyadmission">Fy(BCS,BCOM,BBA/CA)</a></li>
+											<li><a class="dropdown-item" href="admission">SY(BCS,BCOM,BBA/CA)</a></li>
+											<li><a class="dropdown-item" href="TYadmission">TY(BCS,BCOM,BBA/CA)</a></li>
+											<li><a class="dropdown-item" href="adminAdmissionEmail">
+													Admin Admission Login </a></li>
+										</ul></li>
 
 								</ul>
 							</div>

@@ -72,7 +72,7 @@
         Image: <input type="file" name="image" class="form-control mb-3" /><br/>
 
         <input type="submit" value="Submit" class="btn btn-primary w-100" />
-                    <a href="${pageContext.request.contextPath}/home.jsp" style="margin-left:auto">Back to home Form</a>
+         <a  href="${pageContext.request.contextPath}/home.jsp" style="margin-left:250px"> Back to Home Page</a>
         
     </form>
     

@@ -2,12 +2,20 @@ package com.example.JijamataCollegeProject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class JijamataCollegeProjectApplication {
+public class JijamataCollegeProjectApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JijamataCollegeProjectApplication.class, args);
-	}
-	
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(JijamataCollegeProjectApplication.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(JijamataCollegeProjectApplication.class, args);
+    }
 }
+
+

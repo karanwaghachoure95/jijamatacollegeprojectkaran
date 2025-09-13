@@ -105,7 +105,7 @@ input:focus {
 <div class="card">
     <header>
         <h1 class="title">Book Login</h1>
-        <p class="subtitle">Enter email and Phone Number</p>
+        <p class="subtitle">Enter Book ID and Issue Date</p>
     </header>
 
     <c:if test="${not empty error}">
@@ -126,7 +126,7 @@ input:focus {
 
 
     <div class="footer">
-        <a href="${pageContext.request.contextPath}/home.jsp">Back to home Form</a>
+        <a href="${pageContext.request.contextPath}/home.jsp">Back to Home Page</a>
     </div>
 </div>
 </body>

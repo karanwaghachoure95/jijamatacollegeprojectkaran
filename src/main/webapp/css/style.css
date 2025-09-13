@@ -77,6 +77,8 @@ html {
 	height: auto;
 }
 
+
+
 .college-name {
 	position: absolute;
 	top: 50%;
@@ -372,6 +374,13 @@ button {
 	padding-top: 14px !important;
 	padding: 0;
 }
+
+
+  .navbar-nav {
+    margin-left: 29%; /* 🔥 60% Right shift */
+  }
+
+
 
 .navigation.navbar-dark .navbar-nav .nav-link {
 	padding: 7px 0px 27px 0px;

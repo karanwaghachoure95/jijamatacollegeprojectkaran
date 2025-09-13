@@ -61,14 +61,16 @@
 									</li>
 									<li class="nav-item"><a class="nav-link" href="about.jsp">About</a>
 									</li>
-									<li class="nav-item"><a class="nav-link" href="staff.jsp">Our
+									<li class="nav-item"><a class="nav-link" href="staff.jsp">
 											Staff</a></li>
 									<li class="nav-item"><a class="nav-link"
 										href="gallery.jsp">Gallery</a></li>
 									<li class="nav-item"><a class="nav-link" href="blog.jsp">Blog</a>
 									</li>
 									<li class="nav-item active"><a class="nav-link"
-										href="contact.jsp">Contact Us</a></li>
+										href="contact.jsp">ContactUs</a></li>
+									<li class="nav-item "><a class="nav-link" href="video.jsp">Video</a>
+									</li>
 								</ul>
 							</div>
 						</nav>
@@ -179,6 +181,8 @@
 							<li><a href="gallery.jsp">Gallery</a></li>
 							<li><a href="blog.jsp">Blog</a></li>
 							<li class="active"><a href="contact.jsp">Contact Us</a></li>
+							<li><a href="video.jsp">Video</a></li>
+
 						</ul>
 					</div>
 					<div class="col-md-4">

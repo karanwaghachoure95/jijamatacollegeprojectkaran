@@ -192,7 +192,6 @@ h2 {
 				</div>
 			</div>
 			
-			
 			<!-- 🔗 Syllabus -->
 			<div class="col-md-4">
 				<div class="card p-4 text-center">
@@ -200,6 +199,16 @@ h2 {
 					<h5>SPPU Syllabus</h5>
 					<p>Fill Jijamata Collage Id Card  .</p>
 					<a href="https://forms.gle/6qf9nbRmM1fSfcT79"
+						target="_blank" class="btn btn-custom"> View Syllabus </a>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="card p-4 text-center">
+					<i class="fa-solid fa-scroll icon"></i>
+					<h5>SPPU Syllabus</h5>
+					<p>Chatgpt link .</p>
+					<a href="https://chatgpt.com/"
 						target="_blank" class="btn btn-custom"> View Syllabus </a>
 				</div>
 			</div>

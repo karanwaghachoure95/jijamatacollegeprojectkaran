@@ -63,4 +63,5 @@ public class Library {
     // 👇 One-to-Many mapping
     @OneToMany(mappedBy = "libraryUser", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> books;
+    
 }

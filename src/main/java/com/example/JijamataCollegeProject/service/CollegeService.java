@@ -3,16 +3,22 @@ package com.example.JijamataCollegeProject.service;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.JijamataCollegeProject.dao.CollegeDao;
+import com.example.JijamataCollegeProject.entity.Admission;
 import com.example.JijamataCollegeProject.entity.Book;
 import com.example.JijamataCollegeProject.entity.CollageOtpSend;
 import com.example.JijamataCollegeProject.entity.College;
 import com.example.JijamataCollegeProject.entity.ContactUs;
+import com.example.JijamataCollegeProject.entity.ContactUser;
+import com.example.JijamataCollegeProject.entity.FyAdmission;
 import com.example.JijamataCollegeProject.entity.Library;
+import com.example.JijamataCollegeProject.entity.LibraryAdminOtp;
 import com.example.JijamataCollegeProject.entity.Otp;
+import com.example.JijamataCollegeProject.entity.TyAdmission;
 
 @Service
 public class CollegeService {
@@ -89,5 +95,136 @@ public class CollegeService {
 			return  dao.getBooksByCourseAndYear(course,year);
 		
 		}
-	
+
+		public boolean save(Admission admission) {
+			return dao.save(admission);
+			
+		}
+
+		public boolean save(TyAdmission admission) {
+			return dao.save(admission);
+			
+		}
+
+		public boolean save(FyAdmission admission) {
+			return dao.save(admission);
+			
+		}
+
+		public List<ContactUs> findAll() {
+            return dao.findAll();
+		}
+		
+		public void deleteContact(Long id) {
+		    dao.deleteContact(id);
+		}
+
+		public void deletelibrary(Long id) {
+			dao.deletelibrary(id);
+			
+		}
+
+		public List<Library> findAllLibrary() {
+			return dao.findAllLibrary();
+		}
+
+		public boolean adminCheckOtp(String otp) {
+			return dao.adminCheckOtp(otp);
+			
+		}
+
+		public void saveAdminOtp(String otp , LibraryAdminOtp user) {
+			dao.saveAdminOtp(otp,user);
+			
+		}
+
+		public void saveContactAdminOtp(String otp, ContactUser user) {
+			dao.saveContactAdminOtp(otp,user);
+		}
+
+		public boolean admincontactotpVerify(String otp) {
+			return dao.admincontactotpVerify(otp);
+		}
+
+		public List<ContactUs> findAllContact() {
+			return dao.findAllContact();
+		}
+
+		
+		public List<FyAdmission> fyfindAll() {
+			
+			return dao.fyfindAll();
+		}
+
+		public List<Admission> syfindAll() {
+			
+			return dao.syfindAll();
+		}
+
+		public List<TyAdmission> tyfindAll() {
+			
+			return dao.tyfindAll();
+		}
+
+		
+		public void deleteFyById(Long id) {
+			
+			dao.deleteFyById(id);
+		}
+
+		public void deleteSyById(Long id) {
+		
+			dao.deleteSyById(id);
+		}
+
+		public void deleteTyById(Long id) {
+			dao.deleteTyById(id);
+			
+		}
+
+		public void saveAdmissionOtp(String otp) {
+			dao.saveAdmissionOtp(otp);
+			
+		}
+
+		public boolean adminAdmissionotpVerify(String otp) {
+			return dao.adminAdmissionotpVerify(otp);
+		}
+
+		public FyAdmission findById(Long admissionId) {
+			return dao.getFyAdmissionById(admissionId);
+		}
+
+		public void update(FyAdmission admission) {
+			dao.update(admission);
+			
+		}
+
+		 public boolean saveUser(College user) {
+		        // optional: check confirmPassword here
+		        if (user.getConfirmPassword() != null && !user.getConfirmPassword().equals(user.getPassword())) {
+		            return false;
+		        }
+		        return dao.saveUser(user);
+		    }
+		
+		public List<College> findAllRegisterUser() {
+			return dao.findAllRegisterUser();
+		}
+
+		public void deleteUserById(Integer id) {
+			dao.deleteUserById(id);
+			
+		}
+
+		public void save(String otp) {
+			dao.save(otp);
+			
+		}
+
+		public boolean checkRegisterOtp(String otp) {
+			return dao.checkRegisterOtp(otp);
+			
+		}
+
 }

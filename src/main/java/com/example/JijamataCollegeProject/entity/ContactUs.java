@@ -1,10 +1,13 @@
 package com.example.JijamataCollegeProject.entity;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.PrePersist;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -16,14 +19,12 @@ import lombok.AllArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "contact_us")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class ContactUs {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -43,5 +44,14 @@ public class ContactUs {
     @NotBlank(message = "Message is required")
     @Size(max = 500, message = "Message must be less than 500 characters")
     private String message;
+    
+    // 🆕 New column for form submission date
+    @Column(name = "submitted_at")
+    private Date submittedAt;
+
+    @PrePersist   // Jab record save hoga tab automatically set ho jayega
+    public void prePersist() {
+        this.submittedAt = new Date(); // abhi ka current system timestamp set karega
+    }
 }
 
