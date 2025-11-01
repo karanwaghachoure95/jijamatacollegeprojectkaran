@@ -9,13 +9,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.18</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>com.example</groupId>
     <artifactId>JijamataCollegeProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>  <!-- ✅ JSP ke liye WAR packaging zaruri hai -->
     <name>JijamataCollegeProject</name>
     <description>Demo project for Spring Boot</description>
 
@@ -24,7 +24,7 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Starters -->
+        <!-- ✅ Core Spring Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -50,7 +50,7 @@
             <artifactId>spring-session-jdbc</artifactId>
         </dependency>
 
-        <!-- PostgreSQL -->
+        <!-- ✅ PostgreSQL Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -58,7 +58,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- JSP & JSTL -->
+        <!-- ✅ JSP & JSTL -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
@@ -69,7 +69,7 @@
             <artifactId>jstl</artifactId>
         </dependency>
 
-        <!-- Email -->
+        <!-- ✅ Mail -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
@@ -81,7 +81,7 @@
             <version>1.6.2</version>
         </dependency>
 
-        <!-- QR Code -->
+        <!-- ✅ QR Code -->
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
@@ -93,14 +93,14 @@
             <version>3.3.0</version>
         </dependency>
 
-        <!-- Razorpay -->
+        <!-- ✅ Razorpay -->
         <dependency>
             <groupId>com.razorpay</groupId>
             <artifactId>razorpay-java</artifactId>
             <version>1.4.8</version>
         </dependency>
 
-        <!-- Lombok -->
+        <!-- ✅ Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -108,7 +108,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Devtools -->
+        <!-- ✅ Devtools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -116,15 +116,21 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Testing -->
+        <!-- ✅ Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- ✅ Provided Tomcat (since WAR) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
-    <!-- ✅ Build Configuration (Include JSP files in JAR) -->
     <build>
         <resources>
             <resource>
@@ -140,7 +146,7 @@
         </resources>
 
         <plugins>
-            <!-- Compiler Plugin -->
+            <!-- ✅ Lombok for annotation processing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -155,7 +161,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JSP Packaging (important for Render) -->
+            <!-- ✅ WAR Plugin (JSP ke liye jaruri) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -165,7 +171,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot Plugin -->
+            <!-- ✅ Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
