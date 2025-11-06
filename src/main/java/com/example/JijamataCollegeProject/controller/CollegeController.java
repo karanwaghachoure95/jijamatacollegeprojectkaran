@@ -99,7 +99,7 @@ public class CollegeController {
 	@PostMapping("/deleteUser/{id}")
 	public String deleteUser(@PathVariable Integer id) {
 		service.deleteUserById(id); // service me likha hoga delete ka logic
-		return "redirect:/users"; // delete ke baad list page par redirect
+		 return "registerInfo"; // delete ke baad list page par redirect
 	}
 
 	@GetMapping("/login")
@@ -701,3 +701,5 @@ public class CollegeController {
 	}
 
 }
+
+

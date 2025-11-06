@@ -104,7 +104,7 @@
     </table>
 
     <!-- ✅ Back Button -->
-    <a href="home.jsp" class="btn-back">⬅ Back to Home</a>
+    <a href="${pageContext.request.contextPath}/home.jsp" class="btn-back">⬅ Back to Home</a>
 
 </body>
 </html>

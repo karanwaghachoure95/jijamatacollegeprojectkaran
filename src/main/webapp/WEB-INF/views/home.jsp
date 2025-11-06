@@ -82,7 +82,7 @@
 	<!-- 🔥 LOGOUT BUTTON -->
 	<ul class="navbar-nav ml-auto">
 		<li class="nav-item"><a class="btn btn-danger"
-			href="https://www.google.com/. "
+			href=" /login"
 			style="color: white; font-weight: bold;"> Logout </a></li>
 	</ul>
 	<!-- 🔥 END LOGOUT BUTTON -->
