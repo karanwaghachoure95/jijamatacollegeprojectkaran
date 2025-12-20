@@ -18,4 +18,3 @@ public class JijamataCollegeProjectApplication extends SpringBootServletInitiali
     }
 }
 
-

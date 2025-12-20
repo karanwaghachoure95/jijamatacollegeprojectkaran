@@ -36,7 +36,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
 <style>
-/* 🔥 Header Banner Styling */
+/* ð¥ Header Banner Styling */
 .top-banner {
 	background: #000;
 	padding: 15px 0;
@@ -79,15 +79,15 @@
 			<img src="images/Jijamata.png" alt="Jijamata Logo">
 		</div>
 	</div>
-	<!-- 🔥 LOGOUT BUTTON -->
+	<!-- ð¥ LOG IN BUTTON -->
 	<ul class="navbar-nav ml-auto">
 		<li class="nav-item"><a class="btn btn-danger"
 			href=" /login"
-			style="color: white; font-weight: bold;"> Logout </a></li>
+			style="color: white; font-weight: bold;"> Log in </a></li>
 	</ul>
-	<!-- 🔥 END LOGOUT BUTTON -->
-	<!-- 🔥 NEW HEADER BANNER -->
-	<!-- 🔥 END HEADER BANNER -->
+	<!-- ð¥ END LOGOUT BUTTON -->
+	<!-- ð¥ NEW HEADER BANNER -->
+	<!-- ð¥ END HEADER BANNER -->
 
 	<!-- loader  -->
 	<div class="loader_bg">

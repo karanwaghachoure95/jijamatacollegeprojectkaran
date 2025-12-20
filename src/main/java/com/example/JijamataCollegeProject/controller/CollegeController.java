@@ -48,7 +48,12 @@ public class CollegeController {
 
 	@GetMapping("/")
 	public String openPage() {
-	    return "redirect:/login";
+	    return "redirect:/home";
+	}
+	
+	@GetMapping("/home")
+	public String openPages() {
+	    return "home";
 	}
 
 
