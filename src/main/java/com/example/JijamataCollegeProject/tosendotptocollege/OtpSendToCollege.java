@@ -22,15 +22,22 @@ public class OtpSendToCollege {
 
         String otp = generateOTP(6);
         String subject = "Your OTP Code";
-        String body = "Hello ,\n\nYour OTP is: " + otp +
+        String body = "Hello,\n\nYour OTP is: " + otp +
                 "\n\nPlease use this OTP to verify your account.\n\nRegards,\nJijamata College";
 
+        // ------------------- Properties -------------------
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
 
+        // 🔹 TLS Fix: Trust Gmail SSL certificate
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        props.put("mail.smtp.ssl.checkserveridentity", "false");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+
+        // ------------------- Session -------------------
         Session session = Session.getInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(from, password);
@@ -45,8 +52,6 @@ public class OtpSendToCollege {
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setText(body); 
-            // ✅ Ye line sahi hai
-            // ❌ Ye line hata di: message.setText(user.getEmail());
 
             Transport.send(message);
             System.out.println("✅ OTP sent successfully: " + otp);
@@ -58,6 +63,7 @@ public class OtpSendToCollege {
         return otp;
     }
 
+    // ------------------- OTP Generator -------------------
     private static String generateOTP(int length) {
         String numbers = "0123456789";
         Random rand = new Random();

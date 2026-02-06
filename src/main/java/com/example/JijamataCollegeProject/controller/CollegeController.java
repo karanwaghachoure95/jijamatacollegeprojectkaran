@@ -46,6 +46,12 @@ public class CollegeController {
 	@Autowired
 	private CollegeService service;
 
+	@Autowired 
+	private SendPassword sendpassword;
+	
+	@Autowired
+	private OtpSend otpsend;
+	
 	@GetMapping("/")
 	public String openPage() {
 	    return "redirect:/home";
@@ -157,12 +163,12 @@ public class CollegeController {
 		boolean isCorrect = service.forgotPassword(user);
 
 		if (isCorrect) {
-			String otp = OtpSend.emailesend(user);
+			String otp = otpsend.emailesend(user);
 			boolean isInsert = service.saveOtp(user1, otp);
 			if (isInsert) {
 				String password = SetPassword.setPassword(user);
 				service.setPassword(user, password);
-				SendPassword.sendPassword(password, user);
+				sendpassword.sendPassword(password, user);
 				return "otp";
 			} else {
 				return "forgot";
