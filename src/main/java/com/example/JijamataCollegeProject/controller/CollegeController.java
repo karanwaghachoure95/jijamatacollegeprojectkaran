@@ -109,8 +109,8 @@ public class CollegeController {
 
 	@PostMapping("/deleteUser/{id}")
 	public String deleteUser(@PathVariable Integer id) {
-		service.deleteUserById(id); // service me likha hoga delete ka logic
-		 return "registerInfo"; // delete ke baad list page par redirect
+		service.deleteUserById(id); 
+		 return "registerInfo"; 
 	}
 
 	@GetMapping("/login")
